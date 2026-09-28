@@ -1,6 +1,6 @@
 import { MotionConfig } from "motion/react";
 import { AccessStory } from "./components/AccessStory";
-import { Improvements, Learnings } from "./components/Changes";
+import { Improvements /*, Learnings */ } from "./components/Changes"; // Learnings oculta a pedido (componente mantido)
 import { Commitment, Footer, Methodology } from "./components/Commitment";
 import { DataSection } from "./components/DataSection";
 import { Discovery } from "./components/Discovery";
@@ -37,7 +37,7 @@ export default function App() {
         {/* <Solutions /> seção "Do problema à solução" oculta */}
         <Timeline />
         <Improvements />
-        <Learnings />
+        {/* <Learnings /> seção "Cada incidente trouxe um aprendizado" oculta */}
         <Commitment />
         <Methodology />
       </main>
