@@ -10,3 +10,6 @@ dist
 !docs/auditoria/classificacao-por-linha.csv
 *.docx
 data-raw/
+
+# cache do TypeScript (gerado a cada build)
+*.tsbuildinfo
