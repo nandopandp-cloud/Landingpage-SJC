@@ -1,0 +1,468 @@
+{
+  "_meta": {
+    "fonte": "Ocorrências PLEI 2026 (respostas).xlsx, aba 'Respostas ao formulário 1'",
+    "geradoEm": "2026-09-27",
+    "metodo": "1 linha preenchida = 1 registro. Categoria = tema dominante do relato (devolutiva só como desempate).",
+    "aviso": "Arquivo gerado. Não editar à mão: rode scripts/aggregate_incidents.py."
+  },
+  "period": {
+    "start": "2026-04-07",
+    "end": "2026-09-25"
+  },
+  "total": 404,
+  "status": {
+    "resolvido": 391,
+    "emAnalise": 2,
+    "orientado": 1,
+    "semStatus": 10
+  },
+  "resolutionRate": 96.78,
+  "recordTypes": {
+    "aluno": 223,
+    "profissional": 117,
+    "multipla": 64
+  },
+  "schoolsCount": 53,
+  "categories": [
+    {
+      "id": "cadastro_alunos",
+      "label": "Cadastro e vínculo de alunos",
+      "count": 116,
+      "share": 28.71
+    },
+    {
+      "id": "acesso_credenciais",
+      "label": "Acesso e credenciais",
+      "count": 105,
+      "share": 25.99
+    },
+    {
+      "id": "multiplos",
+      "label": "Casos múltiplos sem detalhe no formulário",
+      "count": 64,
+      "share": 15.84
+    },
+    {
+      "id": "profissionais",
+      "label": "Cadastro, perfil e turmas de profissionais",
+      "count": 45,
+      "share": 11.14
+    },
+    {
+      "id": "avaliacoes",
+      "label": "Avaliações e provas",
+      "count": 41,
+      "share": 10.15
+    },
+    {
+      "id": "atividades",
+      "label": "Atividades e conteúdo pedagógico",
+      "count": 18,
+      "share": 4.46
+    },
+    {
+      "id": "funcionalidade",
+      "label": "Funcionalidade, interface e desempenho",
+      "count": 8,
+      "share": 1.98
+    },
+    {
+      "id": "outros",
+      "label": "Outros / classificação inconclusiva",
+      "count": 7,
+      "share": 1.73
+    }
+  ],
+  "weekly": [
+    {
+      "weekStart": "2026-04-06",
+      "count": 16,
+      "byCategory": {
+        "cadastro_alunos": 1,
+        "acesso_credenciais": 5,
+        "multiplos": 3,
+        "avaliacoes": 0,
+        "profissionais": 6,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 1
+      }
+    },
+    {
+      "weekStart": "2026-04-13",
+      "count": 13,
+      "byCategory": {
+        "cadastro_alunos": 3,
+        "acesso_credenciais": 6,
+        "multiplos": 1,
+        "avaliacoes": 0,
+        "profissionais": 3,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-04-20",
+      "count": 17,
+      "byCategory": {
+        "cadastro_alunos": 4,
+        "acesso_credenciais": 7,
+        "multiplos": 0,
+        "avaliacoes": 4,
+        "profissionais": 2,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-04-27",
+      "count": 33,
+      "byCategory": {
+        "cadastro_alunos": 13,
+        "acesso_credenciais": 4,
+        "multiplos": 2,
+        "avaliacoes": 7,
+        "profissionais": 4,
+        "atividades": 2,
+        "outros": 1,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-05-04",
+      "count": 75,
+      "byCategory": {
+        "cadastro_alunos": 19,
+        "acesso_credenciais": 12,
+        "multiplos": 25,
+        "avaliacoes": 14,
+        "profissionais": 5,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-05-11",
+      "count": 40,
+      "byCategory": {
+        "cadastro_alunos": 10,
+        "acesso_credenciais": 7,
+        "multiplos": 8,
+        "avaliacoes": 11,
+        "profissionais": 3,
+        "atividades": 1,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-05-18",
+      "count": 28,
+      "byCategory": {
+        "cadastro_alunos": 11,
+        "acesso_credenciais": 7,
+        "multiplos": 1,
+        "avaliacoes": 0,
+        "profissionais": 3,
+        "atividades": 1,
+        "outros": 5,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-05-25",
+      "count": 17,
+      "byCategory": {
+        "cadastro_alunos": 6,
+        "acesso_credenciais": 5,
+        "multiplos": 2,
+        "avaliacoes": 0,
+        "profissionais": 2,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 2
+      }
+    },
+    {
+      "weekStart": "2026-06-01",
+      "count": 10,
+      "byCategory": {
+        "cadastro_alunos": 1,
+        "acesso_credenciais": 1,
+        "multiplos": 2,
+        "avaliacoes": 0,
+        "profissionais": 3,
+        "atividades": 3,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-06-08",
+      "count": 11,
+      "byCategory": {
+        "cadastro_alunos": 4,
+        "acesso_credenciais": 5,
+        "multiplos": 2,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-06-15",
+      "count": 6,
+      "byCategory": {
+        "cadastro_alunos": 2,
+        "acesso_credenciais": 3,
+        "multiplos": 1,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-06-22",
+      "count": 10,
+      "byCategory": {
+        "cadastro_alunos": 0,
+        "acesso_credenciais": 4,
+        "multiplos": 4,
+        "avaliacoes": 0,
+        "profissionais": 1,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 1
+      }
+    },
+    {
+      "weekStart": "2026-06-29",
+      "count": 5,
+      "byCategory": {
+        "cadastro_alunos": 1,
+        "acesso_credenciais": 1,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 3,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-07-06",
+      "count": 0,
+      "byCategory": {
+        "cadastro_alunos": 0,
+        "acesso_credenciais": 0,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-07-13",
+      "count": 0,
+      "byCategory": {
+        "cadastro_alunos": 0,
+        "acesso_credenciais": 0,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-07-20",
+      "count": 0,
+      "byCategory": {
+        "cadastro_alunos": 0,
+        "acesso_credenciais": 0,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-07-27",
+      "count": 5,
+      "byCategory": {
+        "cadastro_alunos": 1,
+        "acesso_credenciais": 2,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 1,
+        "atividades": 1,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-08-03",
+      "count": 10,
+      "byCategory": {
+        "cadastro_alunos": 5,
+        "acesso_credenciais": 2,
+        "multiplos": 2,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 1
+      }
+    },
+    {
+      "weekStart": "2026-08-10",
+      "count": 14,
+      "byCategory": {
+        "cadastro_alunos": 2,
+        "acesso_credenciais": 10,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 1,
+        "atividades": 0,
+        "outros": 1,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-08-17",
+      "count": 18,
+      "byCategory": {
+        "cadastro_alunos": 8,
+        "acesso_credenciais": 0,
+        "multiplos": 2,
+        "avaliacoes": 0,
+        "profissionais": 0,
+        "atividades": 6,
+        "outros": 0,
+        "funcionalidade": 2
+      }
+    },
+    {
+      "weekStart": "2026-08-24",
+      "count": 12,
+      "byCategory": {
+        "cadastro_alunos": 3,
+        "acesso_credenciais": 5,
+        "multiplos": 0,
+        "avaliacoes": 0,
+        "profissionais": 2,
+        "atividades": 1,
+        "outros": 0,
+        "funcionalidade": 1
+      }
+    },
+    {
+      "weekStart": "2026-08-31",
+      "count": 12,
+      "byCategory": {
+        "cadastro_alunos": 2,
+        "acesso_credenciais": 4,
+        "multiplos": 2,
+        "avaliacoes": 0,
+        "profissionais": 3,
+        "atividades": 1,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-09-07",
+      "count": 4,
+      "byCategory": {
+        "cadastro_alunos": 0,
+        "acesso_credenciais": 0,
+        "multiplos": 2,
+        "avaliacoes": 1,
+        "profissionais": 1,
+        "atividades": 0,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-09-14",
+      "count": 12,
+      "byCategory": {
+        "cadastro_alunos": 3,
+        "acesso_credenciais": 6,
+        "multiplos": 1,
+        "avaliacoes": 1,
+        "profissionais": 0,
+        "atividades": 1,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    },
+    {
+      "weekStart": "2026-09-21",
+      "count": 36,
+      "byCategory": {
+        "cadastro_alunos": 17,
+        "acesso_credenciais": 9,
+        "multiplos": 4,
+        "avaliacoes": 3,
+        "profissionais": 2,
+        "atividades": 1,
+        "outros": 0,
+        "funcionalidade": 0
+      }
+    }
+  ],
+  "focusWeek": {
+    "weekStart": "2026-09-21",
+    "end": "2026-09-25",
+    "count": 36,
+    "previousWeekCount": 12,
+    "byCategory": {
+      "cadastro_alunos": 17,
+      "acesso_credenciais": 9,
+      "multiplos": 4,
+      "avaliacoes": 3,
+      "profissionais": 2,
+      "atividades": 1,
+      "outros": 0,
+      "funcionalidade": 0
+    }
+  },
+  "peakWeek": {
+    "weekStart": "2026-05-04",
+    "count": 75,
+    "byCategory": {
+      "cadastro_alunos": 19,
+      "acesso_credenciais": 12,
+      "multiplos": 25,
+      "avaliacoes": 14,
+      "profissionais": 5,
+      "atividades": 0,
+      "outros": 0,
+      "funcionalidade": 0
+    }
+  },
+  "signals": {
+    "unexpectedErrorMentions": 5,
+    "unexpectedErrorFirstSeen": "2026-09-17",
+    "intermittentLoginMentions": 3,
+    "intermittentLoginFirstSeen": "2026-09-09"
+  },
+  "dataQuality": {
+    "testLikeRecords": 2,
+    "note": "Registros com texto de teste foram mantidos na contagem para preservar a correspondência 1:1 com a base."
+  }
+}

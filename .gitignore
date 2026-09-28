@@ -1,0 +1,12 @@
+node_modules
+.venv
+dist
+.DS_Store
+
+# Dados brutos NUNCA entram no repositório (contêm dados pessoais de alunos e profissionais)
+*.xlsx
+*.xls
+*.csv
+!docs/auditoria/classificacao-por-linha.csv
+*.docx
+data-raw/
