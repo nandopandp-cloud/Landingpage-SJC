@@ -6,7 +6,7 @@ import { DataSection } from "./components/DataSection";
 import { Discovery } from "./components/Discovery";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
-import { Solutions } from "./components/Solutions";
+// import { Solutions } from "./components/Solutions"; // seção oculta a pedido (componente mantido)
 import { Timeline } from "./components/Timeline";
 import { Starfield } from "./components/ui";
 import { Olympics, WhatHappened } from "./components/WhatHappened";
@@ -34,7 +34,7 @@ export default function App() {
         <DataSection />
         <Discovery />
         <AccessStory />
-        <Solutions />
+        {/* <Solutions /> seção "Do problema à solução" oculta */}
         <Timeline />
         <Improvements />
         <Learnings />
