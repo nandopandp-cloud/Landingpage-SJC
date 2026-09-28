@@ -253,7 +253,7 @@ function WeeklyRhythm() {
 
 /* ———————————————— Distribuição agrupada ———————————————— */
 
-type GroupId = "processo" | "plataforma" | "sem_detalhe";
+type GroupId = "processo" | "plataforma";
 
 const GROUP_STYLE: Record<GroupId, { bar: string; soft: string; dot: string; text: string }> = {
   processo: {
@@ -267,12 +267,6 @@ const GROUP_STYLE: Record<GroupId, { bar: string; soft: string; dot: string; tex
     soft: "rgba(129,140,248,.55)",
     dot: "#818cf8",
     text: "text-[#a5b4fc]",
-  },
-  sem_detalhe: {
-    bar: "repeating-linear-gradient(45deg, rgba(142,162,216,.75) 0 3px, rgba(142,162,216,.25) 3px 7px)",
-    soft: "rgba(142,162,216,.45)",
-    dot: "#8ea2d8",
-    text: "text-ink-3",
   },
 };
 

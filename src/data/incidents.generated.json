@@ -67,11 +67,11 @@
       "group": "plataforma"
     },
     {
-      "id": "multiplos_sem_detalhe",
-      "label": "Casos múltiplos sem detalhe no formulário",
-      "count": 11,
-      "share": 2.72,
-      "group": "sem_detalhe"
+      "id": "outros",
+      "label": "Outros / classificação inconclusiva",
+      "count": 18,
+      "share": 4.46,
+      "group": "plataforma"
     },
     {
       "id": "funcionalidade",
@@ -81,15 +81,8 @@
       "group": "plataforma"
     },
     {
-      "id": "outros",
-      "label": "Outros / classificação inconclusiva",
-      "count": 7,
-      "share": 1.73,
-      "group": "plataforma"
-    },
-    {
       "id": "multiplos_plataforma",
-      "label": "Casos múltiplos: acesso e trilhas",
+      "label": "Navegação nas trilhas dos Planetas",
       "count": 4,
       "share": 0.99,
       "group": "plataforma"
@@ -118,17 +111,8 @@
         "outros",
         "multiplos_plataforma"
       ],
-      "count": 187,
-      "share": 46.29
-    },
-    {
-      "id": "sem_detalhe",
-      "label": "Sem detalhe suficiente",
-      "categories": [
-        "multiplos_sem_detalhe"
-      ],
-      "count": 11,
-      "share": 2.72
+      "count": 198,
+      "share": 49.01
     }
   ],
   "weekly": [
@@ -144,8 +128,7 @@
         "outros": 0,
         "funcionalidade": 1,
         "multiplos_processo": 3,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -160,8 +143,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 1,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -176,8 +158,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -192,8 +173,7 @@
         "outros": 1,
         "funcionalidade": 0,
         "multiplos_processo": 2,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -205,11 +185,10 @@
         "avaliacoes": 14,
         "profissionais": 5,
         "atividades": 0,
-        "outros": 0,
+        "outros": 6,
         "funcionalidade": 0,
         "multiplos_processo": 19,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 6
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -221,11 +200,10 @@
         "avaliacoes": 11,
         "profissionais": 3,
         "atividades": 1,
-        "outros": 0,
+        "outros": 1,
         "funcionalidade": 0,
         "multiplos_processo": 7,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 1
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -240,8 +218,7 @@
         "outros": 5,
         "funcionalidade": 0,
         "multiplos_processo": 1,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -256,8 +233,7 @@
         "outros": 0,
         "funcionalidade": 2,
         "multiplos_processo": 2,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -272,8 +248,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 1,
-        "multiplos_plataforma": 1,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 1
       }
     },
     {
@@ -288,8 +263,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 2,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -304,8 +278,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 1,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -317,11 +290,10 @@
         "avaliacoes": 0,
         "profissionais": 1,
         "atividades": 0,
-        "outros": 0,
+        "outros": 1,
         "funcionalidade": 1,
         "multiplos_processo": 3,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 1
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -336,8 +308,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -352,8 +323,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -368,8 +338,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -384,8 +353,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -400,8 +368,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -413,11 +380,10 @@
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
-        "outros": 0,
+        "outros": 1,
         "funcionalidade": 1,
         "multiplos_processo": 1,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 1
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -432,8 +398,7 @@
         "outros": 1,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -445,11 +410,10 @@
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 6,
-        "outros": 0,
+        "outros": 1,
         "funcionalidade": 2,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 1,
-        "multiplos_sem_detalhe": 1
+        "multiplos_plataforma": 1
       }
     },
     {
@@ -464,8 +428,7 @@
         "outros": 0,
         "funcionalidade": 1,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -480,8 +443,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 2,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -493,11 +455,10 @@
         "avaliacoes": 1,
         "profissionais": 1,
         "atividades": 0,
-        "outros": 0,
+        "outros": 1,
         "funcionalidade": 0,
         "multiplos_processo": 0,
-        "multiplos_plataforma": 1,
-        "multiplos_sem_detalhe": 1
+        "multiplos_plataforma": 1
       }
     },
     {
@@ -512,8 +473,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 1,
-        "multiplos_plataforma": 0,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 0
       }
     },
     {
@@ -528,8 +488,7 @@
         "outros": 0,
         "funcionalidade": 0,
         "multiplos_processo": 3,
-        "multiplos_plataforma": 1,
-        "multiplos_sem_detalhe": 0
+        "multiplos_plataforma": 1
       }
     }
   ],
@@ -547,8 +506,7 @@
       "outros": 0,
       "funcionalidade": 0,
       "multiplos_processo": 3,
-      "multiplos_plataforma": 1,
-      "multiplos_sem_detalhe": 0
+      "multiplos_plataforma": 1
     }
   },
   "peakWeek": {
@@ -560,11 +518,10 @@
       "avaliacoes": 14,
       "profissionais": 5,
       "atividades": 0,
-      "outros": 0,
+      "outros": 6,
       "funcionalidade": 0,
       "multiplos_processo": 19,
-      "multiplos_plataforma": 0,
-      "multiplos_sem_detalhe": 6
+      "multiplos_plataforma": 0
     }
   },
   "signals": {
@@ -575,6 +532,7 @@
   },
   "dataQuality": {
     "testLikeRecords": 2,
+    "multiplosSemDetalhe": 11,
     "note": "Registros com texto de teste foram mantidos na contagem para preservar a correspondência 1:1 com a base."
   }
 }

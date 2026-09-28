@@ -80,7 +80,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 80,2026-04-30,profissional,acesso_credenciais,profissional: senha/login,resolvido
 81,2026-05-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
 82,2026-05-04,multipla,multiplos_processo,múltipla/cadastro: aluno cadastrado e conectado à prova,resolvido
-83,2026-05-04,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
+83,2026-05-04,multipla,outros,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
 84,2026-05-04,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 85,2026-05-04,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 86,2026-05-04,aluno,avaliacoes,relato cita prova/avaliação,resolvido
@@ -93,19 +93,19 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 93,2026-05-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
 94,2026-05-04,multipla,multiplos_processo,múltipla/cadastro: cadastro de aluno criado,resolvido
 95,2026-05-04,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-96,2026-05-04,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
+96,2026-05-04,multipla,outros,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 97,2026-05-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
 98,2026-05-04,aluno,avaliacoes,override: prova não aparece para desbloqueio,resolvido
-99,2026-05-05,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
+99,2026-05-05,multipla,outros,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
 100,2026-05-05,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 101,2026-05-05,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 102,2026-05-05,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 103,2026-05-05,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
-104,2026-05-05,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
+104,2026-05-05,multipla,outros,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
 105,2026-05-05,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 106,2026-05-05,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 107,2026-05-05,multipla,multiplos_processo,múltipla/cadastro: alunos retirados da prova e da turma (transferência),resolvido
-108,2026-05-05,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
+108,2026-05-05,multipla,outros,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 109,2026-05-05,aluno,cadastro_alunos,override: exclusão de turmas de outra escola,sem_status
 110,2026-05-05,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 111,2026-05-06,profissional,avaliacoes,relato cita prova/avaliação,resolvido
@@ -142,7 +142,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 142,2026-05-08,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 143,2026-05-08,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 144,2026-05-08,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
-145,2026-05-08,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
+145,2026-05-08,multipla,outros,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 146,2026-05-08,aluno,acesso_credenciais,aluno: senha/login,resolvido
 147,2026-05-08,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 148,2026-05-08,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
@@ -188,7 +188,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 188,2026-05-14,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 189,2026-05-15,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 190,2026-05-15,aluno,avaliacoes,relato cita prova/avaliação,resolvido
-191,2026-05-15,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
+191,2026-05-15,multipla,outros,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 192,2026-05-15,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 193,2026-05-15,aluno,acesso_credenciais,override: senha informada no cadastro não funciona,resolvido
 194,2026-05-15,aluno,acesso_credenciais,aluno: senha/login,resolvido
@@ -272,7 +272,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 272,2026-06-25,profissional,acesso_credenciais,profissional: senha/login,resolvido
 273,2026-06-25,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 274,2026-06-25,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
-275,2026-06-25,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
+275,2026-06-25,multipla,outros,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 276,2026-06-26,aluno,acesso_credenciais,aluno: senha/login,resolvido
 277,2026-06-28,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 278,2026-06-29,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
@@ -285,7 +285,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 285,2026-07-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 286,2026-07-30,aluno,acesso_credenciais,override: e-mail do aluno; devolutiva com nova senha,resolvido
 287,2026-07-31,profissional,atividades,profissional: disciplinas/atividades,resolvido
-288,2026-08-03,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
+288,2026-08-03,multipla,outros,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
 289,2026-08-03,profissional,acesso_credenciais,profissional: senha/login,resolvido
 290,2026-08-03,aluno,funcionalidade,override: repetição de questões e demora na divulgação,sem_status
 291,2026-08-04,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
@@ -317,7 +317,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 317,2026-08-19,aluno,atividades,aluno: atividades/tarefas,resolvido
 318,2026-08-20,aluno,cadastro_alunos,override: transferência de turma/escola,resolvido
 319,2026-08-20,multipla,multiplos_plataforma,múltipla/tecnico: encaminhado ao time de Engenharia,sem_status
-320,2026-08-21,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
+320,2026-08-21,multipla,outros,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
 321,2026-08-21,profissional,funcionalidade,"override: pontos, trilhas e travamentos (relato amplo)",sem_status
 322,2026-08-21,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 323,2026-08-21,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
@@ -352,7 +352,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 352,2026-09-03,profissional,profissionais,override: cadastro de professora substituta,resolvido
 353,2026-09-04,profissional,acesso_credenciais,profissional: senha/login,resolvido
 354,2026-09-09,profissional,avaliacoes,relato cita prova/avaliação,resolvido
-355,2026-09-10,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
+355,2026-09-10,multipla,outros,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
 356,2026-09-10,multipla,multiplos_plataforma,múltipla/tecnico: reportado ao time responsável,resolvido
 357,2026-09-12,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 358,2026-09-14,aluno,acesso_credenciais,aluno: senha/login,resolvido

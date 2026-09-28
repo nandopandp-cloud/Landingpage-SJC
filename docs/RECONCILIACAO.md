@@ -91,8 +91,11 @@ Por decisão do time, a distribuição passou a separar a natureza dos registros
   e os casos múltiplos que, pela devolutiva, eram reset de senha, ajuste de cadastro ou turma, prova, perfil
   ou orientação de uso.
 - **Acesso e uso da plataforma**: acesso e credenciais, profissionais, atividades, funcionalidade, outros e os
-  casos múltiplos encaminhados para análise técnica.
-- **Sem detalhe suficiente**: casos múltiplos cuja devolutiva não identifica o tema.
+  casos múltiplos encaminhados para análise técnica (exibidos como “Navegação nas trilhas dos Planetas”).
+- Os casos múltiplos cuja devolutiva não identifica o tema foram somados a “Outros / classificação inconclusiva”.
+
+Tom do texto: o grupo de processo é descrito como “pontos de um processo que podemos aprimorar juntos”,
+sem atribuir a responsabilidade só ao cliente.
 
 Os 64 casos múltiplos foram classificados pela devolutiva da equipe, porque o relato estava em anexo
 (regras e exceções por linha em `scripts/aggregate_incidents.py`, resultado em `docs/auditoria/`):
@@ -104,8 +107,8 @@ Os 64 casos múltiplos foram classificados pela devolutiva da equipe, porque o r
 | Prova / avaliação | 9 | processo |
 | Perfil de profissional | 3 | processo |
 | Orientação de uso | 2 | processo |
-| Técnico (Engenharia, instabilidade, acesso à Olimpíada) | 4 | plataforma |
-| Sem detalhe | 11 | sem detalhe |
+| Técnico (Engenharia, instabilidade, acesso à Olimpíada) | 4 | plataforma (“Navegação nas trilhas dos Planetas”) |
+| Sem detalhe | 11 | plataforma (somados a “Outros”) |
 
 Observação: a leitura inicial era de que a maioria dos múltiplos fosse reset de senha. Pelas devolutivas,
 reset aparece explicitamente em 12 casos. Os anexos (não lidos) podem conter mais pedidos de reset dentro

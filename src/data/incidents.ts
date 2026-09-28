@@ -25,11 +25,10 @@ export type CategoryId =
   | "outros"
   | "funcionalidade"
   | "multiplos_processo"
-  | "multiplos_plataforma"
-  | "multiplos_sem_detalhe";
+  | "multiplos_plataforma";
 
 /** processo = ruído de processo/comunicação (não eram falhas da plataforma); plataforma = acesso e uso. */
-export type GroupId = "processo" | "plataforma" | "sem_detalhe";
+export type GroupId = "processo" | "plataforma";
 
 export interface Category {
   id: CategoryId;
@@ -77,7 +76,7 @@ interface Generated {
     intermittentLoginMentions: number;
     intermittentLoginFirstSeen: string | null;
   };
-  dataQuality: { testLikeRecords: number; note: string };
+  dataQuality: { testLikeRecords: number; multiplosSemDetalhe: number; note: string };
 }
 
 const g = generated as unknown as Generated;

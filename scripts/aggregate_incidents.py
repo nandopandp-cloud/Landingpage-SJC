@@ -61,8 +61,7 @@ CATEGORIES = OrderedDict([
     ("outros", "Outros / classificação inconclusiva"),
     ("funcionalidade", "Funcionalidade, interface e desempenho"),
     ("multiplos_processo", "Casos múltiplos: reset de senha e ajustes de cadastro"),
-    ("multiplos_plataforma", "Casos múltiplos: acesso e trilhas"),
-    ("multiplos_sem_detalhe", "Casos múltiplos sem detalhe no formulário"),
+    ("multiplos_plataforma", "Navegação nas trilhas dos Planetas"),
 ])
 
 # Enquadramento definido pelo time (28/09/2026): cadastro/vínculo de alunos, avaliações e os pedidos em lote
@@ -70,7 +69,6 @@ CATEGORIES = OrderedDict([
 GROUPS = OrderedDict([
     ("processo", ("Processo e comunicação", ["cadastro_alunos", "avaliacoes", "multiplos_processo"])),
     ("plataforma", ("Acesso e uso da plataforma", ["acesso_credenciais", "profissionais", "atividades", "funcionalidade", "outros", "multiplos_plataforma"])),
-    ("sem_detalhe", ("Sem detalhe suficiente", ["multiplos_sem_detalhe"])),
 ])
 
 # Registros "múltipla professor e/ou aluno": o relato fica em anexo, então o subtema vem da devolutiva.
@@ -99,7 +97,8 @@ MULTI_SUB_TO_CAT = {
     "perfil": "multiplos_processo",
     "orientacao": "multiplos_processo",
     "tecnico": "multiplos_plataforma",
-    "sem_detalhe": "multiplos_sem_detalhe",
+    # múltiplos sem detalhe identificável somam-se a "Outros / classificação inconclusiva"
+    "sem_detalhe": "outros",
 }
 
 # Overrides manuais, por nº da linha na planilha (linha 1 = cabeçalho).
@@ -306,12 +305,15 @@ def aggregate(xlsx: Path) -> dict:
     unexpected_error_mentions = []
     intermittent_login_mentions = []
     test_like = []
+    multi_sem_detalhe = 0
 
     for row_no, r in rows:
         kind = KIND_MAP[norm(r[C_KIND])]
         desc = norm(r[C_DESC_STUDENT]) or norm(r[C_DESC_TEACHER])
         reply = norm(r[C_REPLY])
         cat, rule = classify(row_no, kind, desc, reply)
+        if rule.startswith("múltipla/sem_detalhe"):
+            multi_sem_detalhe += 1
         st = normalize_status(r[C_STATUS])
         ts: dt.datetime = r[C_TS]
         wk = monday(ts.date())
@@ -415,6 +417,7 @@ def aggregate(xlsx: Path) -> dict:
         },
         "dataQuality": {
             "testLikeRecords": len(test_like),
+            "multiplosSemDetalhe": multi_sem_detalhe,
             "note": "Registros com texto de teste foram mantidos na contagem para preservar a correspondência 1:1 com a base.",
         },
     }, audit
