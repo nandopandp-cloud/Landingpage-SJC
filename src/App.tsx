@@ -9,7 +9,7 @@ import { Nav } from "./components/Nav";
 // import { Solutions } from "./components/Solutions"; // seção oculta a pedido (componente mantido)
 import { Timeline } from "./components/Timeline";
 import { Starfield } from "./components/ui";
-import { Olympics, WhatHappened } from "./components/WhatHappened";
+import { /* Olympics, */ WhatHappened } from "./components/WhatHappened"; // Olympics oculta a pedido (componente mantido)
 
 /**
  * Progressão narrativa: curiosidade → contexto → reconhecimento → entendimento → ação
@@ -30,7 +30,7 @@ export default function App() {
       <main id="conteudo">
         <Hero />
         <WhatHappened />
-        <Olympics />
+        {/* <Olympics /> seção "Durante as Olimpíadas" oculta */}
         <DataSection />
         <Discovery />
         <AccessStory />
