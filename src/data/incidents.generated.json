@@ -1,7 +1,7 @@
 {
   "_meta": {
     "fonte": "Ocorrências PLEI 2026 (respostas).xlsx, aba 'Respostas ao formulário 1'",
-    "geradoEm": "2026-09-27",
+    "geradoEm": "2026-09-28",
     "metodo": "1 linha preenchida = 1 registro. Categoria = tema dominante do relato (devolutiva só como desempate).",
     "aviso": "Arquivo gerado. Não editar à mão: rode scripts/aggregate_incidents.py."
   },
@@ -28,49 +28,107 @@
       "id": "cadastro_alunos",
       "label": "Cadastro e vínculo de alunos",
       "count": 116,
-      "share": 28.71
+      "share": 28.71,
+      "group": "processo"
     },
     {
       "id": "acesso_credenciais",
       "label": "Acesso e credenciais",
       "count": 105,
-      "share": 25.99
+      "share": 25.99,
+      "group": "plataforma"
     },
     {
-      "id": "multiplos",
-      "label": "Casos múltiplos sem detalhe no formulário",
-      "count": 64,
-      "share": 15.84
+      "id": "multiplos_processo",
+      "label": "Casos múltiplos: reset de senha e ajustes de cadastro",
+      "count": 49,
+      "share": 12.13,
+      "group": "processo"
     },
     {
       "id": "profissionais",
       "label": "Cadastro, perfil e turmas de profissionais",
       "count": 45,
-      "share": 11.14
+      "share": 11.14,
+      "group": "plataforma"
     },
     {
       "id": "avaliacoes",
       "label": "Avaliações e provas",
       "count": 41,
-      "share": 10.15
+      "share": 10.15,
+      "group": "processo"
     },
     {
       "id": "atividades",
       "label": "Atividades e conteúdo pedagógico",
       "count": 18,
-      "share": 4.46
+      "share": 4.46,
+      "group": "plataforma"
+    },
+    {
+      "id": "multiplos_sem_detalhe",
+      "label": "Casos múltiplos sem detalhe no formulário",
+      "count": 11,
+      "share": 2.72,
+      "group": "sem_detalhe"
     },
     {
       "id": "funcionalidade",
       "label": "Funcionalidade, interface e desempenho",
       "count": 8,
-      "share": 1.98
+      "share": 1.98,
+      "group": "plataforma"
     },
     {
       "id": "outros",
       "label": "Outros / classificação inconclusiva",
       "count": 7,
-      "share": 1.73
+      "share": 1.73,
+      "group": "plataforma"
+    },
+    {
+      "id": "multiplos_plataforma",
+      "label": "Casos múltiplos: acesso e trilhas",
+      "count": 4,
+      "share": 0.99,
+      "group": "plataforma"
+    }
+  ],
+  "groups": [
+    {
+      "id": "processo",
+      "label": "Processo e comunicação",
+      "categories": [
+        "cadastro_alunos",
+        "avaliacoes",
+        "multiplos_processo"
+      ],
+      "count": 206,
+      "share": 50.99
+    },
+    {
+      "id": "plataforma",
+      "label": "Acesso e uso da plataforma",
+      "categories": [
+        "acesso_credenciais",
+        "profissionais",
+        "atividades",
+        "funcionalidade",
+        "outros",
+        "multiplos_plataforma"
+      ],
+      "count": 187,
+      "share": 46.29
+    },
+    {
+      "id": "sem_detalhe",
+      "label": "Sem detalhe suficiente",
+      "categories": [
+        "multiplos_sem_detalhe"
+      ],
+      "count": 11,
+      "share": 2.72
     }
   ],
   "weekly": [
@@ -80,12 +138,14 @@
       "byCategory": {
         "cadastro_alunos": 1,
         "acesso_credenciais": 5,
-        "multiplos": 3,
         "avaliacoes": 0,
         "profissionais": 6,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 1
+        "funcionalidade": 1,
+        "multiplos_processo": 3,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -94,12 +154,14 @@
       "byCategory": {
         "cadastro_alunos": 3,
         "acesso_credenciais": 6,
-        "multiplos": 1,
         "avaliacoes": 0,
         "profissionais": 3,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 1,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -108,12 +170,14 @@
       "byCategory": {
         "cadastro_alunos": 4,
         "acesso_credenciais": 7,
-        "multiplos": 0,
         "avaliacoes": 4,
         "profissionais": 2,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -122,12 +186,14 @@
       "byCategory": {
         "cadastro_alunos": 13,
         "acesso_credenciais": 4,
-        "multiplos": 2,
         "avaliacoes": 7,
         "profissionais": 4,
         "atividades": 2,
         "outros": 1,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 2,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -136,12 +202,14 @@
       "byCategory": {
         "cadastro_alunos": 19,
         "acesso_credenciais": 12,
-        "multiplos": 25,
         "avaliacoes": 14,
         "profissionais": 5,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 19,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 6
       }
     },
     {
@@ -150,12 +218,14 @@
       "byCategory": {
         "cadastro_alunos": 10,
         "acesso_credenciais": 7,
-        "multiplos": 8,
         "avaliacoes": 11,
         "profissionais": 3,
         "atividades": 1,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 7,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 1
       }
     },
     {
@@ -164,12 +234,14 @@
       "byCategory": {
         "cadastro_alunos": 11,
         "acesso_credenciais": 7,
-        "multiplos": 1,
         "avaliacoes": 0,
         "profissionais": 3,
         "atividades": 1,
         "outros": 5,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 1,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -178,12 +250,14 @@
       "byCategory": {
         "cadastro_alunos": 6,
         "acesso_credenciais": 5,
-        "multiplos": 2,
         "avaliacoes": 0,
         "profissionais": 2,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 2
+        "funcionalidade": 2,
+        "multiplos_processo": 2,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -192,12 +266,14 @@
       "byCategory": {
         "cadastro_alunos": 1,
         "acesso_credenciais": 1,
-        "multiplos": 2,
         "avaliacoes": 0,
         "profissionais": 3,
         "atividades": 3,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 1,
+        "multiplos_plataforma": 1,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -206,12 +282,14 @@
       "byCategory": {
         "cadastro_alunos": 4,
         "acesso_credenciais": 5,
-        "multiplos": 2,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 2,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -220,12 +298,14 @@
       "byCategory": {
         "cadastro_alunos": 2,
         "acesso_credenciais": 3,
-        "multiplos": 1,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 1,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -234,12 +314,14 @@
       "byCategory": {
         "cadastro_alunos": 0,
         "acesso_credenciais": 4,
-        "multiplos": 4,
         "avaliacoes": 0,
         "profissionais": 1,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 1
+        "funcionalidade": 1,
+        "multiplos_processo": 3,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 1
       }
     },
     {
@@ -248,12 +330,14 @@
       "byCategory": {
         "cadastro_alunos": 1,
         "acesso_credenciais": 1,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 3,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -262,12 +346,14 @@
       "byCategory": {
         "cadastro_alunos": 0,
         "acesso_credenciais": 0,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -276,12 +362,14 @@
       "byCategory": {
         "cadastro_alunos": 0,
         "acesso_credenciais": 0,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -290,12 +378,14 @@
       "byCategory": {
         "cadastro_alunos": 0,
         "acesso_credenciais": 0,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -304,12 +394,14 @@
       "byCategory": {
         "cadastro_alunos": 1,
         "acesso_credenciais": 2,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 1,
         "atividades": 1,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -318,12 +410,14 @@
       "byCategory": {
         "cadastro_alunos": 5,
         "acesso_credenciais": 2,
-        "multiplos": 2,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 1
+        "funcionalidade": 1,
+        "multiplos_processo": 1,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 1
       }
     },
     {
@@ -332,12 +426,14 @@
       "byCategory": {
         "cadastro_alunos": 2,
         "acesso_credenciais": 10,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 1,
         "atividades": 0,
         "outros": 1,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -346,12 +442,14 @@
       "byCategory": {
         "cadastro_alunos": 8,
         "acesso_credenciais": 0,
-        "multiplos": 2,
         "avaliacoes": 0,
         "profissionais": 0,
         "atividades": 6,
         "outros": 0,
-        "funcionalidade": 2
+        "funcionalidade": 2,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 1,
+        "multiplos_sem_detalhe": 1
       }
     },
     {
@@ -360,12 +458,14 @@
       "byCategory": {
         "cadastro_alunos": 3,
         "acesso_credenciais": 5,
-        "multiplos": 0,
         "avaliacoes": 0,
         "profissionais": 2,
         "atividades": 1,
         "outros": 0,
-        "funcionalidade": 1
+        "funcionalidade": 1,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -374,12 +474,14 @@
       "byCategory": {
         "cadastro_alunos": 2,
         "acesso_credenciais": 4,
-        "multiplos": 2,
         "avaliacoes": 0,
         "profissionais": 3,
         "atividades": 1,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 2,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -388,12 +490,14 @@
       "byCategory": {
         "cadastro_alunos": 0,
         "acesso_credenciais": 0,
-        "multiplos": 2,
         "avaliacoes": 1,
         "profissionais": 1,
         "atividades": 0,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 0,
+        "multiplos_plataforma": 1,
+        "multiplos_sem_detalhe": 1
       }
     },
     {
@@ -402,12 +506,14 @@
       "byCategory": {
         "cadastro_alunos": 3,
         "acesso_credenciais": 6,
-        "multiplos": 1,
         "avaliacoes": 1,
         "profissionais": 0,
         "atividades": 1,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 1,
+        "multiplos_plataforma": 0,
+        "multiplos_sem_detalhe": 0
       }
     },
     {
@@ -416,12 +522,14 @@
       "byCategory": {
         "cadastro_alunos": 17,
         "acesso_credenciais": 9,
-        "multiplos": 4,
         "avaliacoes": 3,
         "profissionais": 2,
         "atividades": 1,
         "outros": 0,
-        "funcionalidade": 0
+        "funcionalidade": 0,
+        "multiplos_processo": 3,
+        "multiplos_plataforma": 1,
+        "multiplos_sem_detalhe": 0
       }
     }
   ],
@@ -433,12 +541,14 @@
     "byCategory": {
       "cadastro_alunos": 17,
       "acesso_credenciais": 9,
-      "multiplos": 4,
       "avaliacoes": 3,
       "profissionais": 2,
       "atividades": 1,
       "outros": 0,
-      "funcionalidade": 0
+      "funcionalidade": 0,
+      "multiplos_processo": 3,
+      "multiplos_plataforma": 1,
+      "multiplos_sem_detalhe": 0
     }
   },
   "peakWeek": {
@@ -447,12 +557,14 @@
     "byCategory": {
       "cadastro_alunos": 19,
       "acesso_credenciais": 12,
-      "multiplos": 25,
       "avaliacoes": 14,
       "profissionais": 5,
       "atividades": 0,
       "outros": 0,
-      "funcionalidade": 0
+      "funcionalidade": 0,
+      "multiplos_processo": 19,
+      "multiplos_plataforma": 0,
+      "multiplos_sem_detalhe": 6
     }
   },
   "signals": {

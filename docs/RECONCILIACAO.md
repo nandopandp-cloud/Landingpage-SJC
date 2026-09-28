@@ -83,6 +83,36 @@ Principais critérios que explicam as diferenças:
 Para voltar a publicar os valores do HTML, os valores estão em `previousAnalysisReference`
 (`src/data/incidents.ts`). Nesse caso, porém, o total teria de ser 405, sem conciliação com a base.
 
+### Reenquadramento: processo e comunicação × plataforma (28/09/2026)
+
+Por decisão do time, a distribuição passou a separar a natureza dos registros:
+
+- **Processo e comunicação** (não eram falhas da plataforma): cadastro e vínculo de alunos, avaliações e provas
+  e os casos múltiplos que, pela devolutiva, eram reset de senha, ajuste de cadastro ou turma, prova, perfil
+  ou orientação de uso.
+- **Acesso e uso da plataforma**: acesso e credenciais, profissionais, atividades, funcionalidade, outros e os
+  casos múltiplos encaminhados para análise técnica.
+- **Sem detalhe suficiente**: casos múltiplos cuja devolutiva não identifica o tema.
+
+Os 64 casos múltiplos foram classificados pela devolutiva da equipe, porque o relato estava em anexo
+(regras e exceções por linha em `scripts/aggregate_incidents.py`, resultado em `docs/auditoria/`):
+
+| Subtema (pela devolutiva) | Casos | Grupo |
+|---|---:|---|
+| Ajuste de cadastro / turma | 23 | processo |
+| Reset de senha | 12 | processo |
+| Prova / avaliação | 9 | processo |
+| Perfil de profissional | 3 | processo |
+| Orientação de uso | 2 | processo |
+| Técnico (Engenharia, instabilidade, acesso à Olimpíada) | 4 | plataforma |
+| Sem detalhe | 11 | sem detalhe |
+
+Observação: a leitura inicial era de que a maioria dos múltiplos fosse reset de senha. Pelas devolutivas,
+reset aparece explicitamente em 12 casos. Os anexos (não lidos) podem conter mais pedidos de reset dentro
+dos lotes “resolvidos conforme anexo”.
+
+O recorte do relatório fica em 07/04–25/09/2026: registros posteriores na planilha (a partir de 28/09) não entram.
+
 ## 4. Período e “uma semana fora da normalidade”
 
 - A base cobre **07/04 a 25/09/2026** (~24 semanas), não uma única semana. A página deixa isso

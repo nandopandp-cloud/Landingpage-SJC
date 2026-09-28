@@ -19,16 +19,30 @@ import generated from "./incidents.generated.json";
 export type CategoryId =
   | "cadastro_alunos"
   | "acesso_credenciais"
-  | "multiplos"
   | "avaliacoes"
   | "profissionais"
   | "atividades"
   | "outros"
-  | "funcionalidade";
+  | "funcionalidade"
+  | "multiplos_processo"
+  | "multiplos_plataforma"
+  | "multiplos_sem_detalhe";
+
+/** processo = ruído de processo/comunicação (não eram falhas da plataforma); plataforma = acesso e uso. */
+export type GroupId = "processo" | "plataforma" | "sem_detalhe";
 
 export interface Category {
   id: CategoryId;
   label: string;
+  count: number;
+  share: number;
+  group: GroupId;
+}
+
+export interface Group {
+  id: GroupId;
+  label: string;
+  categories: CategoryId[];
   count: number;
   share: number;
 }
@@ -47,6 +61,7 @@ interface Generated {
   recordTypes: { aluno: number; profissional: number; multipla: number };
   schoolsCount: number;
   categories: Category[];
+  groups: Group[];
   weekly: WeekPoint[];
   focusWeek: {
     weekStart: string;
@@ -70,7 +85,7 @@ const g = generated as unknown as Generated;
 const byId = Object.fromEntries(g.categories.map((c) => [c.id, c])) as Record<CategoryId, Category>;
 
 /** Os dois temas que concentram a maior parte dos relatos (derivado, não fixo). */
-const [first, second] = [...g.categories].filter((c) => c.id !== "multiplos").sort((a, b) => b.count - a.count);
+const [first, second] = [...g.categories].filter((c) => !c.id.startsWith("multiplos")).sort((a, b) => b.count - a.count);
 const topTwoCount = first.count + second.count;
 
 export const incidentStats = {
@@ -82,6 +97,7 @@ export const incidentStats = {
   recordTypes: g.recordTypes,
   schoolsCount: g.schoolsCount,
   categories: g.categories,
+  groups: g.groups,
   byId,
   topTwo: {
     ids: [first.id, second.id] as [CategoryId, CategoryId],
@@ -111,13 +127,14 @@ export const previousAnalysisReference = {
   categories: {
     cadastro_alunos: 112,
     acesso_credenciais: 97,
+    /** o HTML não dividia os múltiplos: 64 numa categoria só */
     multiplos: 64,
     avaliacoes: 51,
     profissionais: 28,
     atividades: 24,
     outros: 21,
     funcionalidade: 8,
-  } satisfies Record<CategoryId, number>,
+  },
 } as const;
 
 // ——— Formatação pt-BR ———

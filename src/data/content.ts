@@ -530,10 +530,6 @@ export const categoryInfo: Record<string, { short: string; description: string }
     short: "Acesso e credenciais",
     description: "Senha incorreta, “usuário não encontrado”, “Erro inesperado” e pedidos de reset de senha.",
   },
-  multiplos: {
-    short: "Casos múltiplos",
-    description: "Registros enviados como “múltipla professor e/ou aluno”, com o detalhe em anexo. Mantidos como categoria própria.",
-  },
   avaliacoes: {
     short: "Avaliações e provas",
     description: "Presença do aluno na prova, liberação e bloqueio, datas e acesso a relatórios e resultados.",
@@ -550,8 +546,39 @@ export const categoryInfo: Record<string, { short: string; description: string }
     short: "Funcionalidade e desempenho",
     description: "Telas que não abriam, travamentos, repetição de questões e inconsistência de resultados.",
   },
+  multiplos_processo: {
+    short: "Múltiplos: senha e cadastro",
+    description: "Registros em lote com o detalhe em anexo que, pela devolutiva, eram reset de senha, ajustes de cadastro e turma, provas ou orientação de uso.",
+  },
+  multiplos_plataforma: {
+    short: "Múltiplos: acesso e trilhas",
+    description: "Registros em lote encaminhados para análise técnica: bloqueio de trilhas, instabilidade e acesso à Olimpíada.",
+  },
+  multiplos_sem_detalhe: {
+    short: "Múltiplos sem detalhe",
+    description: "Registros em lote cujo detalhe ficou só no anexo e a devolutiva não permite identificar o tema.",
+  },
   outros: {
     short: "Outros",
     description: "Relatos sem tema identificável, registros de teste do formulário e análises de pontuação atípica.",
+  },
+};
+
+/* ————————————————————————— GRUPOS DA DISTRIBUIÇÃO ————————————————————————— */
+
+/** Enquadramento definido pelo time em 28/09/2026 (ver docs/RECONCILIACAO.md §3). */
+export const groupInfo: Record<string, { title: string; description: string }> = {
+  processo: {
+    title: "Processo e comunicação",
+    description:
+      "Não eram falhas da plataforma. Foram cadastros, vínculos, avaliações e pedidos de senha em que faltou clareza ou alinhamento entre as partes. A resposta aqui é processo e comunicação.",
+  },
+  plataforma: {
+    title: "Acesso e uso da plataforma",
+    description: "Relatos ligados ao acesso, ao funcionamento e à configuração da plataforma. É onde estão os problemas técnicos investigados.",
+  },
+  sem_detalhe: {
+    title: "Sem detalhe suficiente",
+    description: "Registros em lote com o detalhe apenas em anexo.",
   },
 };

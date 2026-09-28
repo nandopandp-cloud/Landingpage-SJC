@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useMemo, useState } from "react";
-import { categoryInfo } from "../data/content";
+import { categoryInfo, groupInfo } from "../data/content";
 import { fmtDate, fmtInt, fmtPct, incidentStats as S, type CategoryId, type WeekPoint } from "../data/incidents";
 import { CountUp, Icon, Reveal, SectionHeader, useSpotlight } from "./ui";
 
@@ -251,15 +251,39 @@ function WeeklyRhythm() {
   );
 }
 
-/* ———————————————— Distribuição + radar ———————————————— */
+/* ———————————————— Distribuição agrupada ———————————————— */
+
+type GroupId = "processo" | "plataforma" | "sem_detalhe";
+
+const GROUP_STYLE: Record<GroupId, { bar: string; soft: string; dot: string; text: string }> = {
+  processo: {
+    bar: "linear-gradient(90deg,#14b8a6,#5eead4)",
+    soft: "rgba(45,212,191,.55)",
+    dot: "#2dd4bf",
+    text: "text-[#5eead4]",
+  },
+  plataforma: {
+    bar: "linear-gradient(90deg,#3b82f6,#818cf8)",
+    soft: "rgba(129,140,248,.55)",
+    dot: "#818cf8",
+    text: "text-[#a5b4fc]",
+  },
+  sem_detalhe: {
+    bar: "repeating-linear-gradient(45deg, rgba(142,162,216,.75) 0 3px, rgba(142,162,216,.25) 3px 7px)",
+    soft: "rgba(142,162,216,.45)",
+    dot: "#8ea2d8",
+    text: "text-ink-3",
+  },
+};
 
 function Distribution() {
   const reduce = useReducedMotion();
-  const cats = S.categories;
-  const [active, setActive] = useState<CategoryId>(cats[0].id);
-  const max = cats[0].count;
-  const top = new Set<CategoryId>(S.topTwo.ids);
+  const groups = S.groups;
+  const [active, setActive] = useState<CategoryId>(S.categories[0].id);
+  const max = Math.max(...S.categories.map((c) => c.count));
   const a = S.byId[active];
+  const activeGroup = a.group as GroupId;
+  let row = 0;
 
   return (
     <div className="mt-4 grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
@@ -270,135 +294,123 @@ function Distribution() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-ink">Distribuição dos problemas</h3>
-            <p className="text-sm text-ink-3">Tema dominante de cada registro · passe o mouse ou toque para detalhes</p>
+            <p className="text-sm text-ink-3">Tema dominante de cada registro, agrupado pela natureza do problema · passe o mouse ou toque para detalhes</p>
           </div>
         </div>
 
-        <ul className="space-y-1" onPointerLeave={() => undefined}>
-          {cats.map((c, i) => {
-            const isActive = c.id === active;
-            const hatched = c.id === "multiplos";
+        <div className="space-y-6">
+          {groups.map((g) => {
+            const gid = g.id as GroupId;
+            const st = GROUP_STYLE[gid];
+            const cats = g.categories.map((id) => S.byId[id]).sort((x, y) => y.count - x.count);
             return (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onPointerEnter={() => setActive(c.id)}
-                  onFocus={() => setActive(c.id)}
-                  onClick={() => setActive(c.id)}
-                  aria-pressed={isActive}
-                  className={`grid w-full grid-cols-[minmax(0,1fr)_2.6rem_4.2rem] items-center gap-x-3 gap-y-2 rounded-xl px-3 py-2.5 text-left transition sm:grid-cols-[minmax(0,17rem)_minmax(0,1fr)_2.6rem_4.2rem] ${
-                    isActive ? "bg-white/[0.06]" : "hover:bg-white/[0.03]"
-                  }`}
-                >
-                  <span className={`text-[0.9rem] leading-snug ${isActive ? "text-ink" : "text-ink-2"}`}>{c.label}</span>
-                  <span className="col-span-3 row-start-2 h-2.5 overflow-hidden rounded-full bg-white/[0.06] sm:col-span-1 sm:row-start-auto">
-                    <motion.span
-                      className="block h-full origin-left rounded-full"
-                      style={{
-                        width: `${(c.count / max) * 100}%`,
-                        background: hatched
-                          ? "repeating-linear-gradient(45deg, rgba(142,162,216,.75) 0 3px, rgba(142,162,216,.25) 3px 7px)"
-                          : top.has(c.id)
-                            ? "linear-gradient(90deg,#3b82f6,#67e8f9)"
-                            : "rgba(142,162,216,.6)",
-                      }}
-                      initial={reduce ? false : { scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.1, delay: 0.1 + i * 0.07, ease: EASE }}
-                    />
+              <section key={g.id} aria-labelledby={`grupo-${g.id}`}>
+                <div className="mb-2 flex items-baseline justify-between gap-3 border-b border-white/[0.07] px-3 pb-2">
+                  <h4 id={`grupo-${g.id}`} className={`flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.12em] ${st.text}`}>
+                    <span className="h-2 w-2 rounded-full" style={{ background: st.dot }} aria-hidden="true" />
+                    {groupInfo[g.id].title}
+                  </h4>
+                  <p className="tabular shrink-0 text-sm text-ink-2">
+                    <span className="font-semibold text-ink">{g.count}</span> · {fmtPct(g.share)}
+                  </p>
+                </div>
+                <ul className="space-y-1">
+                  {cats.map((c) => {
+                    const isActive = c.id === active;
+                    const i = row++;
+                    return (
+                      <li key={c.id}>
+                        <button
+                          type="button"
+                          onPointerEnter={() => setActive(c.id)}
+                          onFocus={() => setActive(c.id)}
+                          onClick={() => setActive(c.id)}
+                          aria-pressed={isActive}
+                          className={`grid w-full grid-cols-[minmax(0,1fr)_2.6rem_4.2rem] items-center gap-x-3 gap-y-2 rounded-xl px-3 py-2.5 text-left transition sm:grid-cols-[minmax(0,17rem)_minmax(0,1fr)_2.6rem_4.2rem] ${
+                            isActive ? "bg-white/[0.06]" : "hover:bg-white/[0.03]"
+                          }`}
+                        >
+                          <span className={`text-[0.9rem] leading-snug ${isActive ? "text-ink" : "text-ink-2"}`}>{c.label}</span>
+                          <span className="col-span-3 row-start-2 h-2.5 overflow-hidden rounded-full bg-white/[0.06] sm:col-span-1 sm:row-start-auto">
+                            <motion.span
+                              className="block h-full origin-left rounded-full"
+                              style={{ width: `${(c.count / max) * 100}%`, background: st.bar, opacity: isActive ? 1 : 0.8 }}
+                              initial={reduce ? false : { scaleX: 0 }}
+                              whileInView={{ scaleX: 1 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 1.1, delay: 0.1 + i * 0.06, ease: EASE }}
+                            />
+                          </span>
+                          <span className="tabular text-right text-[0.9rem] font-semibold text-ink">{c.count}</span>
+                          <span className="tabular text-right text-[0.85rem] text-ink-3">{fmtPct(c.share)}</span>
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {isActive && (
+                            <motion.p
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              className="overflow-hidden px-3 text-sm leading-relaxed text-ink-3 lg:hidden"
+                            >
+                              <span className="block pb-2">{categoryInfo[c.id].description}</span>
+                            </motion.p>
+                          )}
+                        </AnimatePresence>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            );
+          })}
+        </div>
+      </Reveal>
+
+      {/* ——— resumo: processo × plataforma ——— */}
+      <Reveal delay={0.1} className="glass flex flex-col rounded-3xl p-6 sm:p-7">
+        <p className="text-sm text-ink-3">Natureza dos registros</p>
+        <div className="mt-4 flex h-4 w-full overflow-hidden rounded-full bg-white/[0.06]" role="img" aria-label={groups.map((g) => `${groupInfo[g.id].title}: ${fmtPct(g.share)}`).join("; ")}>
+          {groups.map((g, i) => (
+            <motion.span
+              key={g.id}
+              className="h-full first:rounded-l-full last:rounded-r-full"
+              style={{ width: `${g.share}%`, background: GROUP_STYLE[g.id as GroupId].bar, marginLeft: i ? 2 : 0 }}
+              initial={reduce ? false : { scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.1, delay: 0.2 + i * 0.2, ease: EASE }}
+            />
+          ))}
+        </div>
+        <ul className="mt-6 space-y-5">
+          {groups.map((g) => {
+            const st = GROUP_STYLE[g.id as GroupId];
+            const on = activeGroup === g.id;
+            return (
+              <li key={g.id} className={`rounded-2xl border p-4 transition ${on ? "border-white/15 bg-white/[0.04]" : "border-transparent"}`}>
+                <p className="flex items-baseline justify-between gap-3">
+                  <span className={`flex items-center gap-2 text-sm font-semibold ${st.text}`}>
+                    <span className="h-2 w-2 rounded-full" style={{ background: st.dot }} aria-hidden="true" />
+                    {groupInfo[g.id].title}
                   </span>
-                  <span className="tabular text-right text-[0.9rem] font-semibold text-ink">{c.count}</span>
-                  <span className="tabular text-right text-[0.85rem] text-ink-3">{fmtPct(c.share)}</span>
-                </button>
-                <AnimatePresence initial={false}>
-                  {isActive && (
-                    <motion.p
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden px-3 text-sm leading-relaxed text-ink-3 lg:hidden"
-                    >
-                      <span className="block pb-2">{categoryInfo[c.id].description}</span>
-                    </motion.p>
-                  )}
-                </AnimatePresence>
+                  <span className="tabular text-2xl font-semibold tracking-[-0.02em] text-ink">{fmtPct(g.share)}</span>
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-2">{groupInfo[g.id].description}</p>
+                <p className="tabular mt-1 text-xs text-ink-3">{g.count} registros</p>
               </li>
             );
           })}
         </ul>
-        <p className="mt-5 flex items-center gap-2 px-3 text-xs text-ink-3">
-          <span
-            className="inline-block h-2.5 w-5 rounded-full"
-            style={{ background: "repeating-linear-gradient(45deg, rgba(142,162,216,.75) 0 3px, rgba(142,162,216,.25) 3px 7px)" }}
-          />
-          Hachurado: registros sem tema único (detalhe enviado em anexo).
-        </p>
-      </Reveal>
-
-      <Reveal delay={0.1} className="glass hidden flex-col rounded-3xl p-7 lg:flex">
-        <ProblemRadar active={active} onSelect={setActive} />
-        <div className="mt-6 min-h-[132px]" aria-live="polite">
+        <div className="mt-auto hidden border-t border-white/[0.07] pt-5 lg:block" aria-live="polite">
           <AnimatePresence mode="wait">
             <motion.div key={a.id} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.25 }}>
-              <p className="text-sm text-ink-3">Categoria</p>
-              <p className="text-lg font-semibold text-ink">{a.label}</p>
+              <p className="text-xs uppercase tracking-[0.12em] text-ink-3">Em destaque</p>
+              <p className="mt-1 font-semibold text-ink">{a.label}</p>
               <p className="mt-1 text-sm leading-relaxed text-ink-2">{categoryInfo[a.id].description}</p>
-              <p className="mt-3 flex gap-5 text-sm">
-                <span>
-                  <span className="tabular text-xl font-semibold text-ink">{a.count}</span> <span className="text-ink-3">registros</span>
-                </span>
-                <span>
-                  <span className="tabular text-xl font-semibold text-ink">{fmtPct(a.share)}</span>{" "}
-                  <span className="text-ink-3">do total</span>
-                </span>
-              </p>
             </motion.div>
           </AnimatePresence>
         </div>
       </Reveal>
-    </div>
-  );
-}
-
-function ProblemRadar({ active, onSelect }: { active: CategoryId; onSelect: (id: CategoryId) => void }) {
-  const cats = S.categories;
-  const maxShare = cats[0].share;
-  const R = 150;
-  const top = new Set<CategoryId>(S.topTwo.ids);
-  return (
-    <div className="relative mx-auto aspect-square w-full max-w-[340px]">
-      <div
-        className="spin-slow absolute inset-[6%] rounded-full"
-        style={{ background: "conic-gradient(from 0deg, rgba(103,232,249,.22), transparent 20%)" }}
-        aria-hidden="true"
-      />
-      <svg viewBox="-170 -170 340 340" className="relative h-full w-full" aria-label="Radar de problemas: quanto mais longe do centro, maior a participação" role="img">
-        {[0.33, 0.66, 1].map((t) => (
-          <circle key={t} r={R * t} fill="none" stroke="rgba(255,255,255,.08)" />
-        ))}
-        {cats.map((_, i) => {
-          const ang = (i / cats.length) * Math.PI * 2 - Math.PI / 2;
-          return <line key={i} x1="0" y1="0" x2={Math.cos(ang) * R} y2={Math.sin(ang) * R} stroke="rgba(255,255,255,.05)" />;
-        })}
-        {cats.map((c, i) => {
-          const ang = (i / cats.length) * Math.PI * 2 - Math.PI / 2;
-          const d = 26 + (c.share / maxShare) * (R - 30);
-          const x = Math.cos(ang) * d;
-          const y = Math.sin(ang) * d;
-          const r = 3 + Math.sqrt(c.count) * 0.75;
-          const isA = c.id === active;
-          const color = top.has(c.id) ? "#67e8f9" : "#a5b4fc";
-          return (
-            <g key={c.id} className="cursor-pointer" onPointerEnter={() => onSelect(c.id)} onClick={() => onSelect(c.id)}>
-              {isA && <circle cx={x} cy={y} r={r + 8} fill="none" stroke={color} strokeOpacity=".5" className="pulse-ring" style={{ transformOrigin: `${x}px ${y}px`, transformBox: "view-box" }} />}
-              <circle cx={x} cy={y} r={r} fill={color} fillOpacity={isA ? 1 : 0.55} />
-              <circle cx={x} cy={y} r={r + 10} fill="transparent" />
-            </g>
-          );
-        })}
-        <circle r="3" fill="#eef2ff" />
-      </svg>
     </div>
   );
 }

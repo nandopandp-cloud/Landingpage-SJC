@@ -3,15 +3,15 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 3,2026-04-07,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 4,2026-04-07,aluno,acesso_credenciais,aluno: senha/login,resolvido
 5,2026-04-07,aluno,acesso_credenciais,aluno: senha/login,resolvido
-6,2026-04-07,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+6,2026-04-07,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 7,2026-04-07,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 8,2026-04-07,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 9,2026-04-08,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 10,2026-04-08,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 11,2026-04-08,aluno,acesso_credenciais,aluno: senha/login,sem_status
-12,2026-04-09,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+12,2026-04-09,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
 13,2026-04-09,profissional,acesso_credenciais,profissional: senha/login,resolvido
-14,2026-04-09,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+14,2026-04-09,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 15,2026-04-10,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 16,2026-04-10,profissional,acesso_credenciais,profissional: senha/login,resolvido
 17,2026-04-10,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
@@ -27,7 +27,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 27,2026-04-16,profissional,acesso_credenciais,profissional: senha/login,resolvido
 28,2026-04-16,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 29,2026-04-17,profissional,acesso_credenciais,profissional: senha/login,resolvido
-30,2026-04-17,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+30,2026-04-17,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 31,2026-04-22,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 32,2026-04-22,profissional,acesso_credenciais,profissional: senha/login,resolvido
 33,2026-04-22,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
@@ -64,7 +64,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 64,2026-04-29,profissional,atividades,profissional: disciplinas/atividades,resolvido
 65,2026-04-29,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 66,2026-04-29,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-67,2026-04-29,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+67,2026-04-29,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 68,2026-04-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 69,2026-04-30,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 70,2026-04-30,aluno,avaliacoes,relato cita prova/avaliação,resolvido
@@ -72,82 +72,82 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 72,2026-04-30,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 73,2026-04-30,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 74,2026-04-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-75,2026-04-30,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+75,2026-04-30,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
 76,2026-04-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 77,2026-04-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 78,2026-04-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 79,2026-04-30,profissional,acesso_credenciais,profissional: senha/login,resolvido
 80,2026-04-30,profissional,acesso_credenciais,profissional: senha/login,resolvido
 81,2026-05-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
-82,2026-05-04,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-83,2026-05-04,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,sem_status
+82,2026-05-04,multipla,multiplos_processo,múltipla/cadastro: aluno cadastrado e conectado à prova,resolvido
+83,2026-05-04,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
 84,2026-05-04,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 85,2026-05-04,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 86,2026-05-04,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 87,2026-05-04,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 88,2026-05-04,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
-89,2026-05-04,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+89,2026-05-04,multipla,multiplos_processo,múltipla/perfil: perfil de profissional,resolvido
 90,2026-05-04,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 91,2026-05-04,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 92,2026-05-04,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 93,2026-05-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
-94,2026-05-04,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+94,2026-05-04,multipla,multiplos_processo,múltipla/cadastro: cadastro de aluno criado,resolvido
 95,2026-05-04,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-96,2026-05-04,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+96,2026-05-04,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 97,2026-05-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
 98,2026-05-04,aluno,avaliacoes,override: prova não aparece para desbloqueio,resolvido
-99,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-100,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+99,2026-05-05,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
+100,2026-05-05,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 101,2026-05-05,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 102,2026-05-05,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
-103,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-104,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-105,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+103,2026-05-05,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
+104,2026-05-05,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
+105,2026-05-05,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 106,2026-05-05,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-107,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-108,2026-05-05,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+107,2026-05-05,multipla,multiplos_processo,múltipla/cadastro: alunos retirados da prova e da turma (transferência),resolvido
+108,2026-05-05,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 109,2026-05-05,aluno,cadastro_alunos,override: exclusão de turmas de outra escola,sem_status
 110,2026-05-05,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 111,2026-05-06,profissional,avaliacoes,relato cita prova/avaliação,resolvido
-112,2026-05-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+112,2026-05-06,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 113,2026-05-06,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 114,2026-05-06,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 115,2026-05-06,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 116,2026-05-06,aluno,acesso_credenciais,aluno: senha/login,resolvido
-117,2026-05-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-118,2026-05-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+117,2026-05-06,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
+118,2026-05-06,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 119,2026-05-06,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 120,2026-05-06,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-121,2026-05-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+121,2026-05-06,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
 122,2026-05-06,aluno,avaliacoes,relato cita prova/avaliação,resolvido
-123,2026-05-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-124,2026-05-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+123,2026-05-06,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
+124,2026-05-06,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
 125,2026-05-07,aluno,acesso_credenciais,aluno: senha/login,resolvido
-126,2026-05-07,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+126,2026-05-07,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
 127,2026-05-07,profissional,acesso_credenciais,profissional: senha/login,resolvido
 128,2026-05-07,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 129,2026-05-07,profissional,acesso_credenciais,profissional: senha/login,resolvido
 130,2026-05-07,aluno,avaliacoes,relato cita prova/avaliação,resolvido
-131,2026-05-07,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+131,2026-05-07,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 132,2026-05-07,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 133,2026-05-07,profissional,acesso_credenciais,profissional: senha/login,resolvido
 134,2026-05-07,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 135,2026-05-07,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 136,2026-05-07,aluno,avaliacoes,relato cita prova/avaliação,resolvido
-137,2026-05-07,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+137,2026-05-07,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 138,2026-05-07,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 139,2026-05-07,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 140,2026-05-07,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 141,2026-05-08,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 142,2026-05-08,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-143,2026-05-08,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-144,2026-05-08,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-145,2026-05-08,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+143,2026-05-08,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
+144,2026-05-08,multipla,multiplos_processo,múltipla/provas: prova / avaliação,resolvido
+145,2026-05-08,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 146,2026-05-08,aluno,acesso_credenciais,aluno: senha/login,resolvido
 147,2026-05-08,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 148,2026-05-08,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 149,2026-05-08,aluno,acesso_credenciais,aluno: senha/login,resolvido
-150,2026-05-08,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+150,2026-05-08,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 151,2026-05-08,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 152,2026-05-08,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 153,2026-05-08,profissional,acesso_credenciais,profissional: senha/login,resolvido
@@ -160,24 +160,24 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 160,2026-05-11,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 161,2026-05-11,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 162,2026-05-11,profissional,atividades,profissional: disciplinas/atividades,resolvido
-163,2026-05-11,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+163,2026-05-11,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 164,2026-05-11,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-165,2026-05-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+165,2026-05-12,multipla,multiplos_processo,múltipla/cadastro: alunas retiradas de turma e da prova (transferência),resolvido
 166,2026-05-12,profissional,acesso_credenciais,profissional: senha/login,resolvido
-167,2026-05-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+167,2026-05-12,multipla,multiplos_processo,múltipla/cadastro: cadastro de aluno criado,resolvido
 168,2026-05-12,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
-169,2026-05-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+169,2026-05-12,multipla,multiplos_processo,múltipla/cadastro: alunos retirados de turma (e um reset),resolvido
 170,2026-05-12,profissional,cadastro_alunos,override: atualização da base de alunos,resolvido
-171,2026-05-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+171,2026-05-12,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 172,2026-05-12,aluno,acesso_credenciais,aluno: senha/login,resolvido
 173,2026-05-12,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-174,2026-05-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+174,2026-05-12,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 175,2026-05-12,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 176,2026-05-12,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 177,2026-05-12,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 178,2026-05-12,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 179,2026-05-12,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-180,2026-05-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+180,2026-05-12,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 181,2026-05-13,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 182,2026-05-13,profissional,acesso_credenciais,profissional: senha/login,resolvido
 183,2026-05-13,profissional,acesso_credenciais,profissional: senha/login,resolvido
@@ -188,7 +188,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 188,2026-05-14,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 189,2026-05-15,aluno,avaliacoes,relato cita prova/avaliação,resolvido
 190,2026-05-15,aluno,avaliacoes,relato cita prova/avaliação,resolvido
-191,2026-05-15,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+191,2026-05-15,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 192,2026-05-15,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 193,2026-05-15,aluno,acesso_credenciais,override: senha informada no cadastro não funciona,resolvido
 194,2026-05-15,aluno,acesso_credenciais,aluno: senha/login,resolvido
@@ -209,7 +209,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 209,2026-05-20,profissional,acesso_credenciais,profissional: senha/login,resolvido
 210,2026-05-20,profissional,profissionais,override: coordenadora sem acesso ao relatório; vínculo às turmas,resolvido
 211,2026-05-20,aluno,atividades,aluno: atividades/tarefas,resolvido
-212,2026-05-20,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+212,2026-05-20,multipla,multiplos_processo,múltipla/reset: turma já correta; senha da educadora resetada,resolvido
 213,2026-05-20,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 214,2026-05-21,profissional,acesso_credenciais,profissional: senha/login,resolvido
 215,2026-05-21,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
@@ -234,22 +234,22 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 234,2026-05-27,profissional,acesso_credenciais,profissional: sem acesso,resolvido
 235,2026-05-28,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 236,2026-05-28,profissional,acesso_credenciais,profissional: senha/login,resolvido
-237,2026-05-29,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-238,2026-05-29,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+237,2026-05-29,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
+238,2026-05-29,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 239,2026-05-29,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 240,2026-05-29,aluno,funcionalidade,override: inconsistência de resultado confirmada na devolutiva,resolvido
-241,2026-06-01,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,em_analise
+241,2026-06-01,multipla,multiplos_plataforma,múltipla/tecnico: instabilidade / erro em questão,em_analise
 242,2026-06-01,profissional,profissionais,override: cadastro de assessor da Secretaria,resolvido
 243,2026-06-01,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 244,2026-06-02,profissional,atividades,override: inclusão de disciplina no perfil,resolvido
 245,2026-06-03,profissional,atividades,override: inscrição em cursos de formação continuada,em_analise
-246,2026-06-03,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+246,2026-06-03,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 247,2026-06-03,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 248,2026-06-03,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 249,2026-06-03,profissional,atividades,override: inclusão de componente curricular no perfil,resolvido
 250,2026-06-03,profissional,acesso_credenciais,profissional: senha/login,resolvido
 251,2026-06-09,profissional,acesso_credenciais,profissional: senha/login,resolvido
-252,2026-06-10,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+252,2026-06-10,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 253,2026-06-10,profissional,acesso_credenciais,profissional: senha/login,resolvido
 254,2026-06-10,aluno,acesso_credenciais,override: e-mail não reconhecido; pedido de nova senha,resolvido
 255,2026-06-10,aluno,acesso_credenciais,override: e-mail não reconhecido; pedido de nova senha,resolvido
@@ -257,24 +257,24 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 257,2026-06-10,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 258,2026-06-11,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 259,2026-06-12,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
-260,2026-06-12,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+260,2026-06-12,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 261,2026-06-12,profissional,cadastro_alunos,override: atualização da base de alunos,resolvido
 262,2026-06-15,aluno,acesso_credenciais,aluno: senha/login,resolvido
 263,2026-06-15,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-264,2026-06-16,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+264,2026-06-16,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 265,2026-06-18,aluno,acesso_credenciais,aluno: senha/login,resolvido
 266,2026-06-19,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 267,2026-06-19,aluno,acesso_credenciais,aluno: senha/login,resolvido
-268,2026-06-22,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+268,2026-06-22,multipla,multiplos_processo,múltipla/perfil: diretora vinculada à escola correta,resolvido
 269,2026-06-22,profissional,acesso_credenciais,profissional: senha/login,resolvido
 270,2026-06-24,profissional,funcionalidade,"override: aparecem apenas ícones, sem informações",resolvido
 271,2026-06-25,profissional,acesso_credenciais,profissional: senha/login,resolvido
 272,2026-06-25,profissional,acesso_credenciais,profissional: senha/login,resolvido
 273,2026-06-25,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
-274,2026-06-25,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
-275,2026-06-25,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+274,2026-06-25,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
+275,2026-06-25,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva genérica (detalhe só no anexo),resolvido
 276,2026-06-26,aluno,acesso_credenciais,aluno: senha/login,resolvido
-277,2026-06-28,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+277,2026-06-28,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 278,2026-06-29,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 279,2026-06-29,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 280,2026-07-01,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
@@ -285,14 +285,14 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 285,2026-07-30,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 286,2026-07-30,aluno,acesso_credenciais,override: e-mail do aluno; devolutiva com nova senha,resolvido
 287,2026-07-31,profissional,atividades,profissional: disciplinas/atividades,resolvido
-288,2026-08-03,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+288,2026-08-03,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,resolvido
 289,2026-08-03,profissional,acesso_credenciais,profissional: senha/login,resolvido
 290,2026-08-03,aluno,funcionalidade,override: repetição de questões e demora na divulgação,sem_status
 291,2026-08-04,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 292,2026-08-04,aluno,cadastro_alunos,"aluno: sem acesso, resolvido com cadastro/vínculo",resolvido
 293,2026-08-04,aluno,acesso_credenciais,aluno: senha/login,resolvido
 294,2026-08-05,profissional,cadastro_alunos,override: aluno transferido ainda na turma (registrado como profissional),resolvido
-295,2026-08-06,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+295,2026-08-06,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 296,2026-08-06,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 297,2026-08-07,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 298,2026-08-10,profissional,outros,registro de teste,resolvido
@@ -316,8 +316,8 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 316,2026-08-19,aluno,atividades,aluno: atividades/tarefas,resolvido
 317,2026-08-19,aluno,atividades,aluno: atividades/tarefas,resolvido
 318,2026-08-20,aluno,cadastro_alunos,override: transferência de turma/escola,resolvido
-319,2026-08-20,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,sem_status
-320,2026-08-21,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,sem_status
+319,2026-08-20,multipla,multiplos_plataforma,múltipla/tecnico: encaminhado ao time de Engenharia,sem_status
+320,2026-08-21,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
 321,2026-08-21,profissional,funcionalidade,"override: pontos, trilhas e travamentos (relato amplo)",sem_status
 322,2026-08-21,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 323,2026-08-21,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
@@ -342,21 +342,21 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 342,2026-09-01,aluno,acesso_credenciais,aluno: senha/login,resolvido
 343,2026-09-01,aluno,acesso_credenciais,aluno: senha/login,resolvido
 344,2026-09-01,profissional,acesso_credenciais,profissional: senha/login,resolvido
-345,2026-09-02,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+345,2026-09-02,multipla,multiplos_processo,múltipla/reset: reset de senha,resolvido
 346,2026-09-02,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 347,2026-09-02,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-348,2026-09-02,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+348,2026-09-02,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 349,2026-09-03,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 350,2026-09-03,aluno,atividades,aluno: atividades/tarefas,resolvido
 351,2026-09-03,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 352,2026-09-03,profissional,profissionais,override: cadastro de professora substituta,resolvido
 353,2026-09-04,profissional,acesso_credenciais,profissional: senha/login,resolvido
 354,2026-09-09,profissional,avaliacoes,relato cita prova/avaliação,resolvido
-355,2026-09-10,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,sem_status
-356,2026-09-10,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+355,2026-09-10,multipla,multiplos_sem_detalhe,múltipla/sem_detalhe: devolutiva sem detalhe do caso,sem_status
+356,2026-09-10,multipla,multiplos_plataforma,múltipla/tecnico: reportado ao time responsável,resolvido
 357,2026-09-12,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 358,2026-09-14,aluno,acesso_credenciais,aluno: senha/login,resolvido
-359,2026-09-14,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+359,2026-09-14,multipla,multiplos_processo,múltipla/perfil: atividade não encontrada na conta da professora,resolvido
 360,2026-09-15,profissional,atividades,profissional: disciplinas/atividades,sem_status
 361,2026-09-15,aluno,acesso_credenciais,override: conta desativada; reset de senha,resolvido
 362,2026-09-16,aluno,acesso_credenciais,aluno: senha/login,resolvido
@@ -367,7 +367,7 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 367,2026-09-17,aluno,acesso_credenciais,override: erro inesperado mesmo após reset de senha,resolvido
 368,2026-09-17,aluno,cadastro_alunos,override: aluno duplicado na turma,resolvido
 369,2026-09-18,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-370,2026-09-21,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+370,2026-09-21,multipla,multiplos_plataforma,múltipla/tecnico: problema de acesso à Olimpíada,resolvido
 371,2026-09-21,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 372,2026-09-21,profissional,acesso_credenciais,profissional: senha/login,resolvido
 373,2026-09-21,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
@@ -389,16 +389,16 @@ linha_planilha,data,tipo_registro,categoria,regra,status
 389,2026-09-22,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 390,2026-09-23,profissional,atividades,profissional: disciplinas/atividades,resolvido
 391,2026-09-23,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
-392,2026-09-23,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+392,2026-09-23,multipla,multiplos_processo,múltipla/cadastro: ajuste de cadastro / turma,resolvido
 393,2026-09-23,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 394,2026-09-23,aluno,cadastro_alunos,aluno: inclusão/transferência/vínculo,resolvido
 395,2026-09-24,aluno,acesso_credenciais,aluno: senha/login,resolvido
 396,2026-09-24,aluno,acesso_credenciais,aluno: senha/login,resolvido
-397,2026-09-24,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+397,2026-09-24,multipla,multiplos_processo,múltipla/orientacao: conta funcionando; orientação sobre o endereço de acesso,resolvido
 398,2026-09-24,profissional,acesso_credenciais,profissional: senha/login,resolvido
 399,2026-09-24,aluno,acesso_credenciais,aluno: senha/login,resolvido
 400,2026-09-24,aluno,acesso_credenciais,aluno: senha/login,resolvido
-401,2026-09-25,multipla,multiplos,formulário: MÚLTIPLA PROFESSOR E/OU ALUNO,resolvido
+401,2026-09-25,multipla,multiplos_processo,múltipla/orientacao: ranking oculto por regra da Zerando a PLEI,resolvido
 402,2026-09-25,aluno,acesso_credenciais,override: e-mail ou senha incorretos mesmo após reset,resolvido
 403,2026-09-25,profissional,profissionais,profissional: perfil/escola/turmas,resolvido
 404,2026-09-25,aluno,acesso_credenciais,aluno: senha/login,resolvido

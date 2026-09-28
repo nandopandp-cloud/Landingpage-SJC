@@ -48,17 +48,59 @@ KIND_MAP = {
     "MÚLTIPLA PROFESSOR E/OU ALUNO": "multipla",
 }
 
-# Mesma taxonomia e ordem do HTML de análise (analise-ocorrencias-plei.html)
+# Recorte do relatório: registros após esta data ficam de fora (a planilha segue recebendo respostas).
+PERIOD_END = dt.date(2026, 9, 25)
+
+# Taxonomia do HTML de análise, com os "casos múltiplos" divididos pela devolutiva da equipe.
 CATEGORIES = OrderedDict([
     ("cadastro_alunos", "Cadastro e vínculo de alunos"),
     ("acesso_credenciais", "Acesso e credenciais"),
-    ("multiplos", "Casos múltiplos sem detalhe no formulário"),
     ("avaliacoes", "Avaliações e provas"),
     ("profissionais", "Cadastro, perfil e turmas de profissionais"),
     ("atividades", "Atividades e conteúdo pedagógico"),
     ("outros", "Outros / classificação inconclusiva"),
     ("funcionalidade", "Funcionalidade, interface e desempenho"),
+    ("multiplos_processo", "Casos múltiplos: reset de senha e ajustes de cadastro"),
+    ("multiplos_plataforma", "Casos múltiplos: acesso e trilhas"),
+    ("multiplos_sem_detalhe", "Casos múltiplos sem detalhe no formulário"),
 ])
+
+# Enquadramento definido pelo time (28/09/2026): cadastro/vínculo de alunos, avaliações e os pedidos em lote
+# de reset de senha e ajustes não eram falhas da plataforma, e sim ruídos de processo e comunicação.
+GROUPS = OrderedDict([
+    ("processo", ("Processo e comunicação", ["cadastro_alunos", "avaliacoes", "multiplos_processo"])),
+    ("plataforma", ("Acesso e uso da plataforma", ["acesso_credenciais", "profissionais", "atividades", "funcionalidade", "outros", "multiplos_plataforma"])),
+    ("sem_detalhe", ("Sem detalhe suficiente", ["multiplos_sem_detalhe"])),
+])
+
+# Registros "múltipla professor e/ou aluno": o relato fica em anexo, então o subtema vem da devolutiva.
+# Exceções por linha onde a regra não basta (cada uma com justificativa).
+MULTI_OVERRIDES: dict[int, tuple[str, str]] = {
+    319: ("tecnico", "encaminhado ao time de Engenharia"),
+    356: ("tecnico", "reportado ao time responsável"),
+    241: ("tecnico", "instabilidade / erro em questão"),
+    370: ("tecnico", "problema de acesso à Olimpíada"),
+    397: ("orientacao", "conta funcionando; orientação sobre o endereço de acesso"),
+    401: ("orientacao", "ranking oculto por regra da Zerando a PLEI"),
+    359: ("perfil", "atividade não encontrada na conta da professora"),
+    268: ("perfil", "diretora vinculada à escola correta"),
+    212: ("reset", "turma já correta; senha da educadora resetada"),
+    169: ("cadastro", "alunos retirados de turma (e um reset)"),
+    107: ("cadastro", "alunos retirados da prova e da turma (transferência)"),
+    165: ("cadastro", "alunas retiradas de turma e da prova (transferência)"),
+    82: ("cadastro", "aluno cadastrado e conectado à prova"),
+    94: ("cadastro", "cadastro de aluno criado"),
+    167: ("cadastro", "cadastro de aluno criado"),
+}
+MULTI_SUB_TO_CAT = {
+    "reset": "multiplos_processo",
+    "cadastro": "multiplos_processo",
+    "provas": "multiplos_processo",
+    "perfil": "multiplos_processo",
+    "orientacao": "multiplos_processo",
+    "tecnico": "multiplos_plataforma",
+    "sem_detalhe": "multiplos_sem_detalhe",
+}
 
 # Overrides manuais, por nº da linha na planilha (linha 1 = cabeçalho).
 # Usados só onde as regras abaixo não capturam o tema dominante. Cada um tem justificativa.
@@ -163,7 +205,8 @@ def classify(row_no: int, kind: str, desc: str, reply: str) -> tuple[str, str]:
         cat, why = OVERRIDES[row_no]
         return cat, f"override: {why}"
     if kind == "multipla":
-        return "multiplos", "formulário: MÚLTIPLA PROFESSOR E/OU ALUNO"
+        sub, why = classify_multipla(row_no, reply)
+        return MULTI_SUB_TO_CAT[sub], f"múltipla/{sub}: {why}"
     if desc and RE_TEST.search(desc):
         return "outros", "registro de teste"
     if not desc:
@@ -202,6 +245,26 @@ def classify(row_no: int, kind: str, desc: str, reply: str) -> tuple[str, str]:
     return "outros", "aluno: sem tema identificável"
 
 
+def classify_multipla(row_no: int, reply: str) -> tuple[str, str]:
+    """Subtema de um registro múltiplo a partir da devolutiva (o relato original está em anexo)."""
+    if row_no in MULTI_OVERRIDES:
+        return MULTI_OVERRIDES[row_no]
+    r = reply.lower()
+    if not r or re.search(r"não há descrição|não consegui identificar|preencha o formulário novamente", r):
+        return "sem_detalhe", "devolutiva sem detalhe do caso"
+    if re.search(r"engenharia|time responsável|instabilidade", r):
+        return "tecnico", "encaminhado para análise técnica"
+    if re.search(r"senha", r) and re.search(r"resetad|senha de todos|senha do aluno|senha \d|nova senha|senha: ?\d|senhas", r):
+        return "reset", "reset de senha"
+    if re.search(r"retirad|transferid|cadastr|turma correta|já (está|consta|aparece) na (lista|turma)|escola correta", r):
+        return "cadastro", "ajuste de cadastro / turma"
+    if re.search(r"prova|avaliação", r):
+        return "provas", "prova / avaliação"
+    if re.search(r"perfil|ajustado para (cp|vd)|foi ajustado de", r):
+        return "perfil", "perfil de profissional"
+    return "sem_detalhe", "devolutiva genérica (detalhe só no anexo)"
+
+
 def normalize_status(v) -> str:
     s = norm(v)
     if not s:
@@ -220,7 +283,10 @@ def load_rows(xlsx: Path):
     out = []
     for idx, r in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
         if any(norm(v) for v in r):
-            out.append((idx, tuple(r) + (None,) * (C_STATUS + 1 - len(r))))
+            r = tuple(r) + (None,) * (C_STATUS + 1 - len(r))
+            if isinstance(r[C_TS], dt.datetime) and r[C_TS].date() > PERIOD_END:
+                continue
+            out.append((idx, r))
     return out
 
 
@@ -273,6 +339,8 @@ def aggregate(xlsx: Path) -> dict:
 
     total = len(rows)
     assert sum(cats.values()) == total
+    group_of = {c: g for g, (_, ids) in GROUPS.items() for c in ids}
+    assert set(group_of) == set(CATEGORIES), "toda categoria precisa de um grupo"
     assert all(s in {"resolvido", "em_analise", "orientado", "sem_status"} for s in status), status
 
     dates = [r[C_TS].date() for _, r in rows]
@@ -317,8 +385,18 @@ def aggregate(xlsx: Path) -> dict:
         },
         "schoolsCount": len(schools),
         "categories": [
-            {"id": k, "label": CATEGORIES[k], "count": cats[k], "share": pct(cats[k], total)}
+            {"id": k, "label": CATEGORIES[k], "count": cats[k], "share": pct(cats[k], total), "group": group_of[k]}
             for k in sorted(CATEGORIES, key=lambda k: -cats[k])
+        ],
+        "groups": [
+            {
+                "id": g,
+                "label": label,
+                "categories": ids,
+                "count": sum(cats[c] for c in ids),
+                "share": pct(sum(cats[c] for c in ids), total),
+            }
+            for g, (label, ids) in GROUPS.items()
         ],
         "weekly": series,
         "focusWeek": {

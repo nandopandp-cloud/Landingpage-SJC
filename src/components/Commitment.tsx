@@ -112,7 +112,13 @@ export function Methodology() {
             <li>
               <strong className="font-medium text-ink">Categorias.</strong> Cada registro foi classificado pelo tema dominante do relato; a devolutiva
               da equipe foi usada apenas como desempate. Os {S.recordTypes.multipla} registros enviados como “múltipla professor e/ou aluno” tinham o
-              detalhe em anexo e foram mantidos como categoria própria.
+              detalhe em anexo e foram classificados pela devolutiva da equipe; {S.byId.multiplos_sem_detalhe.count} deles não permitem identificar o
+              tema.
+            </li>
+            <li>
+              <strong className="font-medium text-ink">Natureza.</strong> Cadastro e vínculo de alunos, avaliações e os pedidos em lote de reset
+              de senha e ajustes foram agrupados como processo e comunicação: não eram falhas da plataforma, e sim situações em que faltou clareza
+              entre as partes.
             </li>
             <li>
               <strong className="font-medium text-ink">Integralidade.</strong> A contagem inclui registros sem status e {S.dataQuality.testLikeRecords}{" "}
