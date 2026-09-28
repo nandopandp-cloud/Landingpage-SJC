@@ -217,7 +217,7 @@ export function Hero() {
       style={{ "--k": k } as CSSProperties}
     >
       <h1 className="sr-only">
-        PLEI Exploradores. Prestação de contas: tivemos uma semana fora da normalidade. Entendemos o que aconteceu, agimos para resolver e
+        PLEI Exploradores. Relatório: tivemos uma semana fora da normalidade. Entendemos o que aconteceu, agimos para resolver e
         transformamos os aprendizados em melhorias estruturais.
       </h1>
 

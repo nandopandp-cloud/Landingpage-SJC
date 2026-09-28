@@ -1,6 +1,6 @@
 # Landingpage-SJC
 
-Landing page de prestação de contas sobre as ocorrências na **PLEI · Exploradores** em São José
+Relatório sobre as ocorrências na **PLEI · Exploradores** em São José
 dos Campos. É uma experiência narrativa: o que aconteceu, por que aconteceu, o que fizemos e o que
 mudou.
 
